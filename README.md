@@ -43,8 +43,8 @@ http://api.travelpayouts.com/v2/prices/latest?currency=usd&period_type=year&page
  - **limit** — the total number of records on a page. The default value — 30. The maximum value — 1000.
  - **show_to_affiliates** — false — all the prices, true — just the prices, found using the partner marker (recommended). The default value — true.
  - **sorting** — the assorting of prices:
--**price** — by the price (the default value). For the directions **city — city** assorting by the price is possible only;
- - **route** — by the popularity of a route;
+  - **price** — by the price (the default value). For the directions **city — city** assorting by the price is possible only;
+  - **route** — by the popularity of a route;
  - **distance_unit_price** — by the price for 1 km.
  - **trip_class** — the flight class:
   - **0** — The economy class (the default value);
@@ -54,22 +54,23 @@ http://api.travelpayouts.com/v2/prices/latest?currency=usd&period_type=year&page
  - **token** — individual affiliate token.
 
 ### Response example
-{
-	"success":true,
-	"data":[{
-		"show_to_affiliates":true,
-		"trip_class":0,
-		"origin":"WMI",
-		"destination":"WRO",
-		"depart_date":"2015-12-07",
-		"return_date":"2015-12-13",
-		"number_of_changes":0,
-		"value":1183,
-		"found_at":"2015-09-22T14:08:45+04:00",
-		"distance":298,
-		"actual":true
-	}]
-} 
+    {
+		"success":true,
+		"data":[{
+			"show_to_affiliates":true,
+			"trip_class":0,
+			"origin":"WMI",
+			"destination":"WRO",
+			"depart_date":"2015-12-07",
+			"return_date":"2015-12-13",
+			"number_of_changes":0,
+			"value":1183,
+			"found_at":"2015-09-22T14:08:45+04:00",
+			"distance":298,
+			"actual":true
+		}]
+    } 
+
 
 #### Response parameters
  - **origin** — the point of departure.
@@ -108,22 +109,22 @@ http://api.travelpayouts.com/v2/prices/month-matrix?currency=usd&origin=LED&dest
  - **token** — individual affiliate token.
 
 ### Response example
-{{
-    "success":true,
-    "data":[{
-        "show_to_affiliates":true,
-        "trip_class":0,
-        "origin":"LED",
-        "destination":"HKT",
-        "depart_date":"2015-10-01",
-        "return_date":"",
-        "number_of_changes":1,
-        "value":29127,
-        "found_at":"2015-09-24T00:06:12+04:00",
-        "distance":8015,
-        "actual":true
-    }]
-}
+	{{
+	    "success":true,
+	    "data":[{
+		"show_to_affiliates":true,
+		"trip_class":0,
+		"origin":"LED",
+		"destination":"HKT",
+		"depart_date":"2015-10-01",
+		"return_date":"",
+		"number_of_changes":1,
+		"value":29127,
+		"found_at":"2015-09-24T00:06:12+04:00",
+		"distance":8015,
+		"actual":true
+	    }]
+	}
 
 #### Response parameters
  - **origin** — the point of departure.
@@ -161,32 +162,32 @@ http://api.travelpayouts.com/v2/prices/nearest-places-matrix?currency=usd&origin
  - **token** — individual affiliate token.
 
 ### Response example
-{
-"prices":[{
-    "value":26000.0,
-    "trip_class":0,
-    "show_to_affiliates":true,
-    "return_date":"2016-09-18",
-    "origin":"BAX",
-    "number_of_changes":0,
-    "gate":"AMADEUS",
-    "found_at":"2016-07-28T04:57:47Z",
-    "duration":null,
-    "distance":3643,
-    "destination":"SIP",
-    "depart_date":"2016-09-09",
-    "actual":true
-    }],
-"origins":[
-	"BAX"
-	],
-"errors":{
-	"amadeus":{
-    }},
-"destinations":[
-	"SIP"
-    ]
-}
+	{
+	"prices":[{
+	    "value":26000.0,
+	    "trip_class":0,
+	    "show_to_affiliates":true,
+	    "return_date":"2016-09-18",
+	    "origin":"BAX",
+	    "number_of_changes":0,
+	    "gate":"AMADEUS",
+	    "found_at":"2016-07-28T04:57:47Z",
+	    "duration":null,
+	    "distance":3643,
+	    "destination":"SIP",
+	    "depart_date":"2016-09-09",
+	    "actual":true
+	    }],
+	"origins":[
+		"BAX"
+		],
+	"errors":{
+		"amadeus":{
+	    }},
+	"destinations":[
+		"SIP"
+	    ]
+	}
 
 #### Response parameters
  - **origin** — the point of departure.
@@ -226,36 +227,36 @@ http://api.travelpayouts.com/v1/prices/cheap?origin=MOW&destination=HKT&depart_d
  - **currency** — currency of prices. Default value is RUB.
 
 ### Response example
-{
-"success": true,
-"data": {
-	"HKT": {
-		"0": {
-			"price": 35443,
-			"airline": "UN",
-			"flight_number": 571,
-			"departure_at": "2015-06-09T21:20:00Z",
-			"return_at": "2015-07-15T12:40:00Z",
-			"expires_at": "2015-01-08T18:30:40Z"
-		},
-		"1": {
-			"price": 27506,
-			"airline": "CX",
-			"flight_number": 204,
-			"departure_at": "2015-06-05T16:40:00Z",
-			"return_at": "2015-06-22T12:00:00Z",
-			"expires_at": "2015-01-08T18:38:45Z"
-		},
-		"2": {
-			"price": 31914,
-			"airline": "AB",
-			"flight_number": 8113,
-			"departure_at": "2015-06-12T13:45:00Z",
-			"return_at": "2015-06-24T20:30:00Z",
-			"expires_at": "2015-01-08T15:17:42Z"
-		}}
+	{
+	"success": true,
+	"data": {
+		"HKT": {
+			"0": {
+				"price": 35443,
+				"airline": "UN",
+				"flight_number": 571,
+				"departure_at": "2015-06-09T21:20:00Z",
+				"return_at": "2015-07-15T12:40:00Z",
+				"expires_at": "2015-01-08T18:30:40Z"
+			},
+			"1": {
+				"price": 27506,
+				"airline": "CX",
+				"flight_number": 204,
+				"departure_at": "2015-06-05T16:40:00Z",
+				"return_at": "2015-06-22T12:00:00Z",
+				"expires_at": "2015-01-08T18:38:45Z"
+			},
+			"2": {
+				"price": 31914,
+				"airline": "AB",
+				"flight_number": 8113,
+				"departure_at": "2015-06-12T13:45:00Z",
+				"return_at": "2015-06-24T20:30:00Z",
+				"expires_at": "2015-01-08T15:17:42Z"
+			}}
+		}
 	}
-}
 
 
 ### Response parameters
@@ -284,21 +285,21 @@ http://api.travelpayouts.com/v1/prices/direct?origin=MOW&destination=LED&depart_
  - **currency** — currency of prices. Default value is RUB.
 
 ### Response example
-{
-    "success": true,
-    "data": {
-        "LED": {
-            "0": {
-                "price": 4363,
-                "airline": "UT",
-                "flight_number": 369,
-                "departure_at": "2015-06-27T11:35:00Z",
-                "return_at": "2015-07-04T16:00:00Z",
-                "expires_at": "2015-01-08T20:21:46Z"
-            }
-        }
-    }
-}
+	{
+	    "success": true,
+	    "data": {
+		"LED": {
+		    "0": {
+			"price": 4363,
+			"airline": "UT",
+			"flight_number": 369,
+			"departure_at": "2015-06-27T11:35:00Z",
+			"return_at": "2015-07-04T16:00:00Z",
+			"expires_at": "2015-01-08T20:21:46Z"
+		    }
+		}
+	    }
+	}
 
 #### Response parameters
  - **price** – Ticket price (in specified currency).
@@ -326,45 +327,45 @@ http://api.travelpayouts.com/v1/prices/calendar?depart_date=2016-11&origin=MOW&d
  - **currency** — currency of prices. Default value is RUB.
 
 ### Response example
-{
-    "success": true,
-    "data": {
-        "2015-06-01": {
-            "origin": "MOW",
-            "destination": "BCN",
-            "price": 12449,
-            "transfers": 1,
-            "airline": "PS",
-            "flight_number": 576,
-            "departure_at": "2015-06-01T06:35:00Z",
-            "return_at": "2015-07-01T13:30:00Z",
-            "expires_at": "2015-01-07T12:34:14Z"
-        },
-        "2015-06-02": {
-            "origin": "MOW",
-            "destination": "BCN",
-            "price": 13025,
-            "transfers": 1,
-            "airline": "PS",
-            "flight_number": 578,
-            "departure_at": "2015-06-02T17:00:00Z",
-            "return_at": "2015-06-11T13:30:00Z",
-            "expires_at": "2015-01-06T17:15:47Z"
-        },
-        ...
-        "2015-06-30": {
-            "origin": "MOW",
-            "destination": "BCN",
-            "price": 13025,
-            "transfers": 1,
-            "airline": "PS",
-            "flight_number": 578,
-            "departure_at": "2015-06-30T17:00:00Z",
-            "return_at": "2015-07-23T13:30:00Z",
-            "expires_at": "2015-01-07T20:15:34Z"
-        }
-    }
-}
+	{
+	    "success": true,
+	    "data": {
+		"2015-06-01": {
+		    "origin": "MOW",
+		    "destination": "BCN",
+		    "price": 12449,
+		    "transfers": 1,
+		    "airline": "PS",
+		    "flight_number": 576,
+		    "departure_at": "2015-06-01T06:35:00Z",
+		    "return_at": "2015-07-01T13:30:00Z",
+		    "expires_at": "2015-01-07T12:34:14Z"
+		},
+		"2015-06-02": {
+		    "origin": "MOW",
+		    "destination": "BCN",
+		    "price": 13025,
+		    "transfers": 1,
+		    "airline": "PS",
+		    "flight_number": 578,
+		    "departure_at": "2015-06-02T17:00:00Z",
+		    "return_at": "2015-06-11T13:30:00Z",
+		    "expires_at": "2015-01-06T17:15:47Z"
+		},
+		...
+		"2015-06-30": {
+		    "origin": "MOW",
+		    "destination": "BCN",
+		    "price": 13025,
+		    "transfers": 1,
+		    "airline": "PS",
+		    "flight_number": 578,
+		    "departure_at": "2015-06-30T17:00:00Z",
+		    "return_at": "2015-07-23T13:30:00Z",
+		    "expires_at": "2015-01-07T20:15:34Z"
+		}
+	    }
+	}
 
 #### Response parameters
  - **origin** — IATA code of departure city.
@@ -390,28 +391,27 @@ http://api.travelpayouts.com/v1/airline-directions?airline_code=SU&limit=10&toke
  - **token** — individual affiliate token.
 
 ### Response example
-{
-    "success": true,
-    "data": {
-        "MOW-BKK": 187491,
-        "MOW-BCN": 113764,
-        "MOW-PAR": 91889,
-        "MOW-NYC": 77417,
-        "MOW-PRG": 71449,
-        "MOW-ROM": 67190,
-        "MOW-TLV": 62132,
-        "MOW-HKT": 58549,
-        "MOW-GOI": 47341,
-        "MOW-IST": 45553
-    },
-    "error": null,
-    "currency":"rub"
-}
+	{
+	    "success": true,
+	    "data": {
+		"MOW-BKK": 187491,
+		"MOW-BCN": 113764,
+		"MOW-PAR": 91889,
+		"MOW-NYC": 77417,
+		"MOW-PRG": 71449,
+		"MOW-ROM": 67190,
+		"MOW-TLV": 62132,
+		"MOW-HKT": 58549,
+		"MOW-GOI": 47341,
+		"MOW-IST": 45553
+	    },
+	    "error": null,
+	    "currency":"rub"
+	}
 
 #### Description of response
 
 Returns a list of popular routes of an airline, sorted by popularity.
-
 
 ## The calendar of prices for a week
 Brings the prices for the nearest dates to the target ones back.
@@ -430,23 +430,23 @@ http://api.travelpayouts.com/v2/prices/week-matrix?currency=usd&origin=LED&desti
  - **token** — individual affiliate token.
 
 ### Response example
-{
-    «success»:true,
-    «data»:[
-    {
-        «show_to_affiliates»:true,
-        «trip_class»:0,
-        «origin»:«LED»,
-        «destination»:«HKT»,
-        «depart_date»:«2016-03-01»,
-        «return_date»:«2016-03-15»,
-        «number_of_changes»:1,
-        «value»:71725,
-        «found_at»:«2016-02-19T00:04:37+04:00»,
-        «distance»:8015,
-        «actual»:true
-    }]
-}
+	{
+	    «success»:true,
+	    «data»:[
+	    {
+		«show_to_affiliates»:true,
+		«trip_class»:0,
+		«origin»:«LED»,
+		«destination»:«HKT»,
+		«depart_date»:«2016-03-01»,
+		«return_date»:«2016-03-15»,
+		«number_of_changes»:1,
+		«value»:71725,
+		«found_at»:«2016-02-19T00:04:37+04:00»,
+		«distance»:8015,
+		«actual»:true
+	    }]
+	}
 
 #### Response parameters
  - **origin** — the point of departure.
@@ -477,24 +477,24 @@ http://api.travelpayouts.com/v1/city-directions?origin=MOW&currency=usd&token=Pu
  - **token** — individual affiliate token.
 
 ### Response example
-{
-    "success":true,
-    "data":{
-        "AER":{
-            "origin":"MOW",
-            "destination":"AER",
-            "price":3673,
-            "transfers":0,
-            "airline":"WZ",
-            "flight_number":125,
-            "departure_at":"2016-03-08T16:35:00Z",
-            "return_at":"2016-03-17T16:05:00Z",
-            "expires_at":"2016-02-22T09:32:44Z"
-        }
-    },
-    "error":null,
-    "currency":"rub"
-}
+	{
+	    "success":true,
+	    "data":{
+		"AER":{
+		    "origin":"MOW",
+		    "destination":"AER",
+		    "price":3673,
+		    "transfers":0,
+		    "airline":"WZ",
+		    "flight_number":125,
+		    "departure_at":"2016-03-08T16:35:00Z",
+		    "return_at":"2016-03-17T16:05:00Z",
+		    "expires_at":"2016-02-22T09:32:44Z"
+		}
+	    },
+	    "error":null,
+	    "currency":"rub"
+	}
 
 #### Response parameters
  - **origin** — the point of departure.
@@ -502,9 +502,9 @@ http://api.travelpayouts.com/v1/city-directions?origin=MOW&currency=usd&token=Pu
  - **departure_at** — the date of departure.
  - **return_at** — the date of return.
  - **expires_at** — date on which the found price expires (UTC+0).
-number_of_changes — the number of transfers.
+ - **number_of_changes** — the number of transfers.
  - **price** — the cost of a flight, in the currency specified.
-found_at — the time and the date, for which a ticket was found.
+ - **found_at** — the time and the date, for which a ticket was found.
  - **transfers** — the number of direct.
  - **airline** — IATA of airline.
  - **flight_number** — flight number.
@@ -514,22 +514,22 @@ found_at — the time and the date, for which a ticket was found.
 The query http://api.travelpayouts.com/data/countries.json returns a file with a list of countrys from the database. 
 
 ### Example response
-[{
-    "code":"NC",
-    "name":"New Caledonia",
-    "currency":"XPF",
-    "name_translations":{
-        "de":"Neukaledonien",
-        "en":"New Caledonia",
-        "zh-CN":"??????",
-        "tr":"Yeni Kaledonya",
-        "ru":"Новая Каледония",
-        "fr":"Nouvelle-Caledonie",
-        "es":"Nueva Caledonia",
-        "it":"Nuova Caledonia",
-        "th":"???????????????????"
-    }}
-]
+	[{
+	    "code":"NC",
+	    "name":"New Caledonia",
+	    "currency":"XPF",
+	    "name_translations":{
+		"de":"Neukaledonien",
+		"en":"New Caledonia",
+		"zh-CN":"??????",
+		"tr":"Yeni Kaledonya",
+		"ru":"Новая Каледония",
+		"fr":"Nouvelle-Caledonie",
+		"es":"Nueva Caledonia",
+		"it":"Nuova Caledonia",
+		"th":"???????????????????"
+	    }}
+	]
 
 #### Response parameters
  - **code** — IATA-code of country.
@@ -542,27 +542,27 @@ The query http://api.travelpayouts.com/data/countries.json returns a file with a
 The query http://api.travelpayouts.com/data/cities.json returns a file with a list of cities from the database. 
 
 ### Example response
-[{
-    "code":"SCE",
-    "name":"State College",
-    "coordinates":{
-        "lon":-77.84823,
-        "lat":40.85372
-    },
-    "time_zone":"America/New_York",
-    "name_translations":{
-        "de":"State College",
-        "en":"State College",
-        "zh-CN":"???",
-        "tr":"State College",
-        "ru":"Стейт Колледж",
-        "it":"State College",
-        "es":"State College",
-        "fr":"State College",
-        "th":"??????????"
-    },
-    "country_code":"US"
-}]
+	[{
+	    "code":"SCE",
+	    "name":"State College",
+	    "coordinates":{
+		"lon":-77.84823,
+		"lat":40.85372
+	    },
+	    "time_zone":"America/New_York",
+	    "name_translations":{
+		"de":"State College",
+		"en":"State College",
+		"zh-CN":"???",
+		"tr":"State College",
+		"ru":"Стейт Колледж",
+		"it":"State College",
+		"es":"State College",
+		"fr":"State College",
+		"th":"??????????"
+	    },
+	    "country_code":"US"
+	}]
 
 #### Response parameters
  - **code** — city IATA-code.
@@ -577,26 +577,26 @@ The query http://api.travelpayouts.com/data/cities.json returns a file with a li
 The query http://api.travelpayouts.com/data/airports.json returns a file with a list of airports from the database. 
 
 ### Example response
-[{
-    "code":"MQP",
-    "name":"Kruger Mpumalanga International Airport",
-    "coordinates":{
-        "lon":31.098131,
-        "lat":-25.384947
-    },
-    "time_zone":"Africa/Johannesburg",
-    "name_translations":{
-        "de":"Nelspruit",
-        "en":"Kruger Mpumalanga International Airport",
-        "tr":"International Airport",
-        "it":"Kruger Mpumalanga",
-        "fr":"Kruger Mpumalanga",
-        "es":"Kruger Mpumalanga",
-        "th":"???????????????"
-    },
-    "country_code":"ZA",
-    "city_code":"NLP"
-}]
+	[{
+	    "code":"MQP",
+	    "name":"Kruger Mpumalanga International Airport",
+	    "coordinates":{
+		"lon":31.098131,
+		"lat":-25.384947
+	    },
+	    "time_zone":"Africa/Johannesburg",
+	    "name_translations":{
+		"de":"Nelspruit",
+		"en":"Kruger Mpumalanga International Airport",
+		"tr":"International Airport",
+		"it":"Kruger Mpumalanga",
+		"fr":"Kruger Mpumalanga",
+		"es":"Kruger Mpumalanga",
+		"th":"???????????????"
+	    },
+	    "country_code":"ZA",
+	    "city_code":"NLP"
+	}]
 
 #### Response parameters
  - **code** — airport IATA code.
@@ -612,15 +612,15 @@ The query http://api.travelpayouts.com/data/airports.json returns a file with a 
 The query http://api.travelpayouts.com/data/airlines.json returns a file with a list of airlines from the database. 
 
 ### Example response
-[{
-    "name":"Private flight",
-    "alias":null,
-    "iata":null,
-    "icao":null,
-    "callsign":null,
-    "country":null,
-    "is_active":true
-}]
+	[{
+	    "name":"Private flight",
+	    "alias":null,
+	    "iata":null,
+	    "icao":null,
+	    "callsign":null,
+	    "country":null,
+	    "is_active":true
+	}]
 
 #### Response parameters
  - **name** — airline name.
@@ -635,10 +635,10 @@ The query http://api.travelpayouts.com/data/airlines.json returns a file with a 
 The query http://api.travelpayouts.com/data/airlines_alliances.json returns a file with a list of alliances from the database. 
 
 ### Example response
-[{
-    "name":"oneworld",
-    "airlines":["4M","AA","AB","BA","CX","AY","HG","IB","JC","JL","JO","KA","LA","LP","MA","MN","MX","NU","QF","RJ","S7","XL"]
-}]
+	[{
+	    "name":"oneworld",
+	    "airlines":["4M","AA","AB","BA","CX","AY","HG","IB","JC","JL","JO","KA","LA","LP","MA","MN","MX","NU","QF","RJ","S7","XL"]
+	}]
 
 #### Response parameters
  - **name** — alliance name.
@@ -648,10 +648,10 @@ The query http://api.travelpayouts.com/data/airlines_alliances.json returns a fi
 The query http://api.travelpayouts.com/data/planes.json returns a file with a list of airplanes from the database. 
 
 ### Example response
-[{
-    "code":"100",
-    "name":"Fokker 100"
-}]
+	[{
+	    "code":"100",
+	    "name":"Fokker 100"
+	}]
 
 #### Response parameters
  - **code** — plane IATA code.
@@ -661,19 +661,19 @@ The query http://api.travelpayouts.com/data/planes.json returns a file with a li
 The query http://api.travelpayouts.com/data/planes.json returns a file with a list of routes from the database.
 
 ### Example response
-[{
-    "airline_iata":"2B",
-    "airline_icao":null,
-    "departure_airport_iata":"AER",
-    "departure_airport_icao":null,
-    "arrival_airport_iata":"DME",
-    "arrival_airport_icao":null,
-    "codeshare":false,
-    "transfers":0,
-    "planes":[
-        "CR2"
-    ]
-}]
+	[{
+	    "airline_iata":"2B",
+	    "airline_icao":null,
+	    "departure_airport_iata":"AER",
+	    "departure_airport_icao":null,
+	    "arrival_airport_iata":"DME",
+	    "arrival_airport_icao":null,
+	    "codeshare":false,
+	    "transfers":0,
+	    "planes":[
+		"CR2"
+	    ]
+	}]
 
 #### Response parameters
  - **airline_iata** — IATA of airline.
@@ -695,7 +695,7 @@ The query: http://www.travelpayouts.com/whereami?locale=ru&callback=useriata&ip=
  - **ip** — ip-addresses of the users (if the address is not passed, the system determines IP from the header of the request).
 
 ### Example response
-*useriata ({"iata": "MOW", "name": "Moscow"})*
+	*useriata ({"iata": "MOW", "name": "Moscow"})*
 
 #### Response parameters
  - **iata** — IATA code of the city where the user is located;
@@ -709,14 +709,14 @@ Brings the current rate of all popular currencies to RUB back.
 http://yasen.aviasales.ru/adaptors/currency.json
 
 ####Example response
-{
-    "cny":8.24394,
-    "eur":57.1578,
-    "mzn":1.49643,
-    "nio":1.97342,
-    "usd":51.1388,
-    "hrk":7.48953
-}
+	{
+	    "cny":8.24394,
+	    "eur":57.1578,
+	    "mzn":1.49643,
+	    "nio":1.97342,
+	    "usd":51.1388,
+	    "hrk":7.48953
+	}
 
 ## Special offers
 Brings the recent special offers from the airline companies back in the .XML format.
