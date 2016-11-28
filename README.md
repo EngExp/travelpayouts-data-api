@@ -24,7 +24,7 @@ Brings back to the list of prices, found by our users during the recent 48 hours
 
 ### Request
 
-http://api.travelpayouts.com/v2/prices/latest?currency=usd&period_type=year&page=1&limit=30&show_to_affiliates=true&sorting=price&trip_class=0&token=PutHereYourToken
+http://api.travelpayouts.com/v2/prices/latest?currency=usd&period_type=year&page=1&limit=30&sorting=price&trip_class=0&token=PutHereYourToken
 
 #### Request parameters
 
