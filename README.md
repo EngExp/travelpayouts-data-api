@@ -3,7 +3,7 @@ Travelpayouts Data API – the way to get travel insights for your site or blog.
 
 Dear partners! Attention, the data is transferred from the cache, so it is recommended to use them to generate static pages. 
 
-To access the API you must pass your token in the X-Access-Token header or in the token parameter. To obtain a token for the Data Access API, go to http://www.travelpayouts.com/developers/api.
+To access the API you must pass your token in the X-Access-Token header or in the token parameter. To obtain a token for the Data Access API, go to [http://www.travelpayouts.com/developers/api](http://www.travelpayouts.com/developers/api).
 
 Dates are accepted in the formats YYYY-MM and YYYY-MM-DD.
 
@@ -16,8 +16,6 @@ The server response is always sent in json format with the following structure:
 Dates and times are given in UTC, formatted according to [ISO 8601](https://ru.wikipedia.org/wiki/ISO_8601). Prices are given in rubles as of when the ticket is put in the search results. It is not recommended to use expired prices (the approximate expiration date is given in the value of the expires_at parameter).
 
 **Important**. We strongly urge receiving data in compressed GZIP format, which saves a significant amount of time in receiving the response. To get data in compressed form, send the header Accept-Encoding: gzip, deflate.
-
-To obtain access to the API for searching for plane tickets and hotels, [send a request](https://support.travelpayouts.com/hc/en-us/requests/new).
 
 ## The prices for the airline tickets
 Brings back to the list of prices, found by our users during the recent 48 hours according to the filters used.
